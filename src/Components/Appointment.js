@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import AppointmentItem from './AppointmentItem'
 export default class Appointment extends Component {
     render() {
-        return (
-            <div>
-                <p>hello</p>
-            </div>
-        )
+        return this.props.Appointments.map((AppointmentInfo) => (
+            <AppointmentItem AppointmentInfo={AppointmentInfo}/>
+        ))
     }
 }
